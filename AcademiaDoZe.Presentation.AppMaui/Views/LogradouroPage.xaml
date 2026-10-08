@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AcademiaDoZe.Presentation.AppMaui.Views.LogradouroPage"
+             xmlns:vm="clr-namespace:AcademiaDoZe.Presentation.AppMaui.ViewModels"
+             x:DataType="vm:LogradouroViewModel"
+             Title="{Binding Title}">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="15">
+            <Border Style="{StaticResource CardBorder}">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="CEP"/>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <Entry Grid.Column="0" Text="{Binding Logradouro.Cep}" Placeholder="00000-000" Keyboard="Numeric"/>
+                        <Button Grid.Column="1" Text="Buscar CEP" Command="{Binding SearchByCepCommand}" Style="{StaticResource ButtonPrimary}"/>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Style="{StaticResource CardBorder}">
+                <VerticalStackLayout Spacing="15">
+                    <Label Text="Nome / Rua"/>
+                    <Entry Text="{Binding Logradouro.Nome}" Placeholder="Digite o nome da rua..."/>
+
+                    <Label Text="Bairro"/>
+                    <Entry Text="{Binding Logradouro.Bairro}" Placeholder="Digite o bairro..."/>
+
+                    <Label Text="Cidade"/>
+                    <Entry Text="{Binding Logradouro.Cidade}" Placeholder="Digite a cidade..."/>
+
+                    <Label Text="Estado"/>
+                    <Entry Text="{Binding Logradouro.Estado}" Placeholder="Sigla Ex: SC"/>
+
+                    <Label Text="País"/>
+                    <Entry Text="{Binding Logradouro.Pais}" Placeholder="Brasil"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                <Button Grid.Column="0" Text="Cancelar" Command="{Binding CancelCommand}" Style="{StaticResource ButtonSecondary}"/>
+                <Button Grid.Column="1" Text="Salvar" Command="{Binding SaveLogradouroCommand}" Style="{StaticResource ButtonPrimary}"/>
+            </Grid>
+
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

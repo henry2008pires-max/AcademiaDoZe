@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Paleta Modern Navy & Cyan -->
+    <Color x:Key="Primary">#1E293B</Color>          <!-- Slate Dark -->
+    <Color x:Key="PrimaryDark">#0F172A</Color>      <!-- Midnight -->
+    <Color x:Key="Secondary">#0EA5E9</Color>        <!-- Sky Blue / Cyan -->
+    <Color x:Key="Accent">#06B6D4</Color>           <!-- Cyan Accent -->
+    <Color x:Key="BackgroundLight">#F8FAFC</Color>  <!-- Light Gray Bg -->
+    <Color x:Key="BackgroundDark">#020617</Color>   <!-- Deep Slate Dark -->
+
+    <Color x:Key="CardLight">#FFFFFF</Color>
+    <Color x:Key="CardDark">#1E293B</Color>
+
+    <Color x:Key="DangerRed">#EF4444</Color>
+    <Color x:Key="SuccessGreen">#10B981</Color>
+</ResourceDictionary>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Style TargetType="Border" x:Key="CardBorder">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardLight}, Dark={StaticResource CardDark}}"/>
+        <Setter Property="Stroke" Value="{AppThemeBinding Light=#E2E8F0, Dark=#334155}"/>
+        <Setter Property="StrokeThickness" Value="1.5"/>
+        <Setter Property="StrokeShape" Value="RoundRectangle 16"/>
+        <Setter Property="Padding" Value="18"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="ButtonPrimary">
+        <Setter Property="BackgroundColor" Value="{StaticResource Secondary}"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="CornerRadius" Value="12"/>
+        <Setter Property="HeightRequest" Value="48"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="ButtonSecondary">
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light=#64748B, Dark=#94A3B8}"/>
+        <Setter Property="BorderColor" Value="{AppThemeBinding Light=#CBD5E1, Dark=#475569}"/>
+        <Setter Property="BorderWidth" Value="1.5"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="CornerRadius" Value="12"/>
+        <Setter Property="HeightRequest" Value="48"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="ButtonSmall">
+        <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="HeightRequest" Value="34"/>
+        <Setter Property="WidthRequest" Value="65"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="ButtonDanger">
+        <Setter Property="BackgroundColor" Value="{StaticResource DangerRed}"/>
+        <Setter Property="TextColor" Value="White"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="HeightRequest" Value="34"/>
+        <Setter Property="WidthRequest" Value="65"/>
+    </Style>
+</ResourceDictionary>

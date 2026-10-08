@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="../../../../../../../../Projeto/AcademiaDoZe/AcademiaDoZe/AcademiaDoZe.Application/AcademiaDoZe.Application.csproj" />
+  <Project Path="../../../../../../../../Projeto/AcademiaDoZe/AcademiaDoZe/AcademiaDoZe.Domain.Tests/AcademiaDoZe.Domain.Tests.csproj" />
+  <Project Path="../../../../../../../../Projeto/AcademiaDoZe/AcademiaDoZe/AcademiaDoZe.Domain/AcademiaDoZe.Domain.csproj" />
+  <Project Path="../../../../../../../../Projeto/AcademiaDoZe/AcademiaDoZe/AcademiaDoZe.Infrastructure.Tests/AcademiaDoZe.Infrastructure.Tests.csproj" />
+  <Project Path="../../../../../../../../Projeto/AcademiaDoZe/AcademiaDoZe/AcademiaDoZe.Infrastructure/AcademiaDoZe.Infrastructure.csproj" />
+  <Project Path="../../../../../../../../Projeto/AcademiaDoZe/AcademiaDoZe/AcademiaDoZe.Presentation.AppMaui/AcademiaDoZe.Presentation.AppMaui.csproj" Id="ab33a088-1179-4493-af83-a80bb0f7016a">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
