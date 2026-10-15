@@ -10,7 +10,11 @@
 
             <Border Style="{StaticResource CardBorder}" Padding="20">
                 <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
-                    <Image Source="academiadoze.png" HeightRequest="140" WidthRequest="140" Aspect="AspectFit"/>
+                    <Image HeightRequest="160" WidthRequest="280" Aspect="AspectFit">
+                        <Image.Source>
+                            <AppThemeBinding Light="academiadoze_claro.png" Dark="academiadoze_escuro.png" />
+                        </Image.Source>
+                    </Image>
                     <Label Text="Academia do Zé" FontSize="26" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="{StaticResource Secondary}"/>
                     <Label Text="Gestão Integrada &amp; Controle" FontSize="14" HorizontalTextAlignment="Center" TextColor="#64748B"/>
                 </VerticalStackLayout>
@@ -22,6 +26,7 @@
                         <TapGestureRecognizer Command="{Binding NavigateToLogradourosCommand}"/>
                     </Border.GestureRecognizers>
                     <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                        <Label FontFamily="MaterialIcons" Text="&#xe7f1;" FontSize="28" HorizontalTextAlignment="Center" TextColor="{StaticResource Secondary}"/>
                         <Label Text="{Binding TotalLogradouros}" FontSize="32" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="{StaticResource Secondary}"/>
                         <Label Text="Logradouros" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
                     </VerticalStackLayout>
@@ -32,6 +37,7 @@
                         <TapGestureRecognizer Command="{Binding NavigateToAlunosCommand}"/>
                     </Border.GestureRecognizers>
                     <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                        <Label FontFamily="MaterialIcons" Text="&#xe80c;" FontSize="28" HorizontalTextAlignment="Center" TextColor="{StaticResource Secondary}"/>
                         <Label Text="{Binding TotalAlunos}" FontSize="32" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="{StaticResource Secondary}"/>
                         <Label Text="Alunos" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
                     </VerticalStackLayout>
@@ -42,6 +48,7 @@
                         <TapGestureRecognizer Command="{Binding NavigateToColaboradoresCommand}"/>
                     </Border.GestureRecognizers>
                     <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                        <Label FontFamily="MaterialIcons" Text="&#xea67;" FontSize="28" HorizontalTextAlignment="Center" TextColor="{StaticResource Secondary}"/>
                         <Label Text="{Binding TotalColaboradores}" FontSize="32" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="{StaticResource Secondary}"/>
                         <Label Text="Colaboradores" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
                     </VerticalStackLayout>
@@ -52,6 +59,7 @@
                         <TapGestureRecognizer Command="{Binding NavigateToMatriculasCommand}"/>
                     </Border.GestureRecognizers>
                     <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                        <Label FontFamily="MaterialIcons" Text="&#xefec;" FontSize="28" HorizontalTextAlignment="Center" TextColor="{StaticResource Secondary}"/>
                         <Label Text="{Binding TotalMatriculas}" FontSize="32" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="{StaticResource Secondary}"/>
                         <Label Text="Matrículas" FontSize="14" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
                     </VerticalStackLayout>
