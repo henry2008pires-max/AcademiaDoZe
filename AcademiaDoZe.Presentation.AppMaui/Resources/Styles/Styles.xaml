@@ -48,4 +48,11 @@
         <Setter Property="HeightRequest" Value="34"/>
         <Setter Property="WidthRequest" Value="65"/>
     </Style>
+
+    <Style TargetType="Label" x:Key="SubHeadline">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="TextColor" Value="{StaticResource Secondary}"/>
+    </Style>
 </ResourceDictionary>

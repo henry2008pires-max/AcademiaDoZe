@@ -17,4 +17,8 @@
 
     <Color x:Key="DangerRed">#EF4444</Color>
     <Color x:Key="SuccessGreen">#10B981</Color>
+
+    <Color x:Key="Gray400">#94A3B8</Color>
+    <Color x:Key="Gray500">#64748B</Color>
+    <Color x:Key="Gray900">#0F172A</Color>
 </ResourceDictionary>
