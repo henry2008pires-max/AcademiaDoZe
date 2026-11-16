@@ -15,8 +15,24 @@ public static class ApplicationDependencyInjection
         services.AddTransient<IColaboradorService, ColaboradorService>();
         services.AddTransient<IAlunoService, AlunoService>();
         services.AddTransient<IMatriculaService, MatriculaService>();
-        // IAcessoAlunoService e IAcessoColaboradorService serão registrados na Avaliação 03,
-        // quando as camadas de Infrastructure e Application de AcessoAluno/AcessoColaborador existirem.
+        // Serviços de acesso (entrada/saída). Os repositórios são criados com a configuração
+        // atual de banco (RepositoryConfig), como nas demais fábricas abaixo.
+        services.AddTransient<IAcessoAlunoService>(provider =>
+        {
+            var config = provider.GetRequiredService<RepositoryConfig>();
+            return new AcessoAlunoService(
+                new AcessoAlunoRepository(config.ConnectionString, config.DatabaseType),
+                new AlunoRepository(config.ConnectionString, config.DatabaseType),
+                new MatriculaRepository(config.ConnectionString, config.DatabaseType));
+        });
+
+        services.AddTransient<IAcessoColaboradorService>(provider =>
+        {
+            var config = provider.GetRequiredService<RepositoryConfig>();
+            return new AcessoColaboradorService(
+                new AcessoColaboradorRepository(config.ConnectionString, config.DatabaseType),
+                new ColaboradorRepository(config.ConnectionString, config.DatabaseType));
+        });
 
         // AddScoped: cria uma instância do serviço por requisição HTTP.
         // AddSingleton: cria uma única instância do serviço durante toda a vida útil da aplicação.
